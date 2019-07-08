@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>papel aluminio</title>
+	<link rel="stylesheet" href="css/galeria.css" type="text/css">
+  <script src="http://localhost:35729/livereload.js" charset="utf-8"></script>
+
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+ <script src="http://code.jquery.com/jquery-1.11.3.min.js" charset="utf-8"></script>
+
+
+</head>
+<body>
+
+<div id="c-slider">
+  <center><h2>PAPEL ALUMINIO</h2></center>
+  <div id="slider">
+    <section><img src="imagenes/1.png" alt=""></section>
+    <section><img src="imagenes/2.png" alt=""></section>
+    <section><img src="imagenes/3.png" alt=""></section>
+    <section><img src="imagenes/4.jpg" alt=""></section>
+
+
+  </div>
+  <div id="btn-prev">&#60;</div>
+  <div id="btn-next">&#62;</div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+</div>
+<script type="text/javascript">
+
+var slider = $('#slider');
+
+var siguiente = $('#btn-next');
+var anterior = $('#btn-prev');
+
+
+$('#slider section:last').insertBefore('#slider section:first');
+
+slider.css('margin-left',  '-'+100+'%');
+
+function moverD() {
+		slider.animate({marginLeft:'-'+200+'%'},700, function(){
+			 $('#slider section:first').insertAfter('#slider section:last');
+				slider.css('margin-left',  '-'+100+'%');
+		});
+}
+
+function moverI() {
+		slider.animate({marginLeft:0},700, function(){
+			$('#slider section:last').insertBefore('#slider section:first');
+			 slider.css('margin-left',  '-'+100+'%');
+		});
+}
+
+siguiente.on('click',function(){
+	moverD();
+});
+
+anterior.on('click',function(){
+	moverI();
+});
+
+function autoplay() {
+		interval = setInterval(function(){
+			moverD();
+		}, 5000);
+}
+
+autoplay();
+
+</script>
+
+</body>
+</html>

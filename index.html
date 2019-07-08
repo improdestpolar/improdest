@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>improdest</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js" charset="utf-8"></script>
+
+
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/fontello.css">
+  <script src="http://localhost:35729/livereload.js" charset="utf-8"></script>
+  <style type="text/css">
+     body{
+     background-image:url(img/2.jpg) ;
+     background-size: 100% 100%;
+     background-attachment: fixed;
+
+   }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="img">
+    <a href="index.html"><img src="img/3.ico"></a>
+
+  </div>
+
+  <input type="checkbox" name="" value="" id="btn-menu">
+  <label for="btn-menu" class="icon-menu"></label>
+  <nav class="menu">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li class="submenu"><a href="#">Nosotros<span class="fas fa-chevron-down"></span></a>
+         <ul>
+          <li><a href="#">Mision</a></li>
+          <li><a href="#">Vision</a></li>
+         </ul>
+
+      </li>
+
+      <li class="submenu"><a href="#">Productos<span class="fas fa-chevron-down"></span></a>
+        <ul>
+          <li><a href="papelaluminio.html">Papel aluminio</a></li>
+          <li><a href="palochuzo.html">Pincho en bambu</a></li>
+            <li class="submenu"><a href="#">Palillo doble punta<span class="fas fa-chevron-down"></span></a>
+              <ul>
+                <li><a href="#">Palillo Hamburgueza</a></li>
+                <li><a href="#">Palillo diente</a></li>
+              </ul>
+
+          </li>
+          <li><a href="#">Cubiertos plasticos</a>
+              <a href="#">Otros</a>
+          </li>
+        </ul>
+
+
+
+      </li>
+      <li class="submenu"><a href="#"><span class="fab fa-facebook"></span></a>
+        <li class="submenu"><a href="#"><span class="fab fa-instagram"></span></a>
+          <li class="submenu"><a href="#"><span class="fas fa-envelope"></span></a>
+
+
+
+      </li>
+
+    </ul>
+  </nav>
+
+</header>
+
+
+<script type="text/javascript">
+$(".submenu").click(function() {
+  $(this).children("ul").slideToggle();
+})
+$("ul").click(function(p) {
+   p.stopPropagation();
+})
+
+</script>
+
+
+</body>
+</html>
